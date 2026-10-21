@@ -1,0 +1,28 @@
+name: fetch-assets
+on:
+  push:
+    branches: [fetch-assets]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          mkdir -p raw
+          : > raw/report.txt
+          while read -r name url; do
+            [ -z "$name" ] && continue
+            code=$(curl -sSL -A "Mozilla/5.0 (X11; Linux x86_64)" -o "raw/$name" -w "%{http_code} %{content_type} %{size_download}" "$url" || echo "curl-failed")
+            echo "$name $code" >> raw/report.txt
+          done < assets.txt
+          cat raw/report.txt
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add raw
+          git commit -m "Fetch raw assets" || echo "nothing to commit"
+          git push
