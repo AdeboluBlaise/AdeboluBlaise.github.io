@@ -1,4 +1,5 @@
-Copyright 2001-2021 The STIX Fonts Project Authors (https://github.com/stipub/stixfonts), with Reserved Font Name "TM Math". STIX Fonts™ is a trademark of The Institute of Electrical and Electronics Engineers, Inc.
+Tinos fonts by Steve Matteson, distributed by Google Fonts.
+Subset for this site (Latin only) and converted to WOFF2.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

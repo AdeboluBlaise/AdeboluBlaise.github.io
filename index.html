@@ -4,30 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Temitope Adebolu, statistician and data scientist</title>
-  <meta name="description" content="Statistician and data scientist in Nigeria, studying for an MSc in Biostatistics at the University of Ibadan. Projects in R and Python, dashboards, and seven years of applied statistics.">
+  <meta name="description" content="Statistician and data scientist in Nigeria, studying for an MSc in Biostatistics at the University of Ibadan. Selected analyses in R and Python, dashboards, and experience.">
   <meta name="author" content="Temitope Adebolu">
   <link rel="canonical" href="https://adebolublaise.github.io/">
-  <meta name="theme-color" content="#0e231c">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Temitope Adebolu, statistician and data scientist">
-  <meta property="og:description" content="Projects in R and Python, dashboards, and seven years of applied statistics. MSc Biostatistics, University of Ibadan.">
+  <meta property="og:description" content="Selected analyses in R and Python, dashboards, and seven years of applied statistics. MSc Biostatistics, University of Ibadan.">
   <meta property="og:url" content="https://adebolublaise.github.io/">
   <meta property="og:image" content="https://adebolublaise.github.io/assets/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Temitope Adebolu, statistician and data scientist, beside a bell curve of falling beads.">
+  <meta property="og:image:alt" content="Temitope Adebolu, statistician and data scientist.">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="preload" href="/assets/fonts/Archivo.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/STIXTwoText-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') d.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="/assets/css/site.css">
-  <script>document.documentElement.classList.add('js')</script>
   <script src="/assets/js/site.js" defer></script>
 
   <script type="application/ld+json">
@@ -37,7 +44,7 @@
     "name": "Temitope Adebolu",
     "jobTitle": "Statistician and data scientist",
     "url": "https://adebolublaise.github.io/",
-    "image": "https://adebolublaise.github.io/assets/img/portrait-color-720.webp",
+    "image": "https://adebolublaise.github.io/assets/img/portrait-bw-720.webp",
     "email": "mailto:temitopeadebolu5@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Ibadan", "addressCountry": "NG" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Federal University of Technology, Akure" },
@@ -53,15 +60,19 @@
   <header class="site-head">
     <div class="wrap">
       <a class="wordmark" href="#top">Temitope Adebolu</a>
-      <nav class="nav" aria-label="Sections">
-        <ul>
-          <li><a href="#projects">Projects</a></li>
-          <li class="hide-sm"><a href="#dashboards">Dashboards</a></li>
-          <li class="hide-xs"><a href="#experience">Experience</a></li>
-          <li class="hide-sm"><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="head-right">
+        <nav class="nav" aria-label="Sections">
+          <ul>
+            <li class="hide-xs"><a href="#work">Work</a></li>
+            <li class="hide-sm"><a href="#experience">Experience</a></li>
+            <li class="hide-sm"><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -72,236 +83,105 @@
       <section class="hero" aria-labelledby="name">
         <div class="hero-copy">
           <h1 id="name"><span>Temitope</span> <span>Adebolu</span></h1>
-          <p class="lead">Statistician and data scientist. I find the signal in messy data, and explain it so people can act on it.</p>
-          <ul class="hero-facts">
-            <li>MSc Biostatistics, University of Ibadan, in progress</li>
-            <li>B.Tech Statistics, Federal University of Technology, Akure</li>
-          </ul>
+          <p class="role-line">Statistician and data scientist</p>
+          <p class="lead">I find the signal in messy data and explain it so people can act on it. Since 2019 I&rsquo;ve analysed data for researchers and businesses, and taught analytics to more than 500 people.</p>
+          <p class="hero-facts">MSc Biostatistics, University of Ibadan, in progress</p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-solid" href="#work">See my work</a>
             <a class="btn" href="#contact">Get in touch</a>
           </div>
         </div>
-
-        <div class="board" data-galton>
-          <div class="board-stage">
-            <canvas role="img" aria-label="Animated Galton board: beads fall through twelve rows of pegs and pile up into a bell-shaped histogram that matches the binomial curve drawn above it."></canvas>
-            <dl class="readout" aria-hidden="true">
-              <dt><i>n</i> = <span class="val" data-n>0</span></dt><dd></dd>
-              <dt><i>x&#772;</i> = <span class="val" data-mean>&ndash;</span></dt><dd><i>&mu;</i> = 6</dd>
-              <dt><i>s</i>&sup2; = <span class="val" data-var>&ndash;</span></dt><dd><i>&sigma;</i>&sup2; = 3</dd>
-            </dl>
-            <svg class="board-fallback" viewBox="0 0 400 160" aria-hidden="true">
-              <path d="M8 150 C 120 150, 150 20, 200 20 S 280 150, 392 150" fill="none" stroke="#c9a35b" stroke-width="1.5"/>
-              <line x1="8" y1="150.5" x2="392" y2="150.5" stroke="rgba(237,230,211,.24)"/>
-            </svg>
-          </div>
-          <div class="board-foot">
-            <p>A Galton board, simulated live. At each of twelve pegs a bead falls left or right with probability &frac12;; together the beads settle into a binomial distribution.</p>
-            <button class="textbtn" type="button" data-rerun>Drop again</button>
-          </div>
-        </div>
+        <figure class="portrait">
+          <img src="/assets/img/portrait-bw-360.webp" srcset="/assets/img/portrait-bw-360.webp 360w, /assets/img/portrait-bw-720.webp 720w" sizes="(max-width: 640px) 104px, 340px" width="720" height="900" alt="Portrait of Temitope Adebolu in a suit." fetchpriority="high">
+        </figure>
       </section>
     </div>
 
-    <!-- Projects -->
-    <section class="section" id="projects" aria-labelledby="projects-h">
+    <!-- Work -->
+    <section class="section" id="work" aria-labelledby="work-h">
       <div class="wrap">
-        <header class="sec-head">
-          <h2 id="projects-h">Projects</h2>
-          <p>Seven analyses in R and Python, from time series of Nigerian food prices to classification models. Hover over a figure, or tap it, to watch the method at work.</p>
-        </header>
-
-        <div class="projects">
-
-          <article class="proj">
-            <figure class="proj-fig">
-              <svg viewBox="0 0 320 200" data-glyph="food" aria-hidden="true"></svg>
-              <figcaption>Monthly prices of nine staples, each indexed to its first recorded month; imported rice highlighted. <b>Project data.</b></figcaption>
-            </figure>
-            <div class="proj-body">
-              <h3>Food prices in Nigeria: trends and a VAR model</h3>
-              <p>Monthly market prices for nine staples from 2012 to 2022. I interpolated missing months, checked for outliers and made each series stationary with ADF tests and differencing, then fitted a vector autoregression and ran Granger causality tests to see which prices lead the others.</p>
-              <p class="proj-tools">R: ADF test, differencing, VAR, Granger causality</p>
-              <a class="proj-link" href="https://github.com/AdeboluBlaise/R-codes/tree/main/Advanced%20Time-Series%20Analysis%20%26%20VAR%20Modeling%20for%20Food%20Price%20Trends">Code and plots on GitHub</a>
-            </div>
-            <p class="proj-stat"><span class="m">&times;3.6</span><span>rise in the price of a 50 kg bag of imported rice, 2012 to 2022</span></p>
-          </article>
-
-          <article class="proj">
-            <figure class="proj-fig">
-              <svg viewBox="0 0 320 200" data-glyph="hospital" aria-hidden="true"></svg>
-              <figcaption>Beds against staff for 35 hospitals. Hover or tap to move the points to their ranks, the scale Spearman&rsquo;s <span class="m"><i>&rho;</i></span> works on. <b>Project data.</b></figcaption>
-            </figure>
-            <div class="proj-body">
-              <h3>Hospital resources and patient outcomes</h3>
-              <p>A descriptive and inferential study of 35 hospitals: beds, staff, deaths and stroke outcomes. Shapiro&ndash;Wilk tests showed the variables were not normally distributed, so I used Spearman correlations and Wilcoxon rank-sum tests, alongside t-tests and confidence intervals for stroke admissions.</p>
-              <p class="proj-tools">R: Shapiro&ndash;Wilk, Spearman correlation, Wilcoxon rank-sum, t-test, confidence intervals</p>
-              <a class="proj-link" href="https://github.com/AdeboluBlaise/R-codes/tree/main/Hospital%20Data%20Analysis">Code and plots on GitHub</a>
-            </div>
-            <p class="proj-stat"><span class="m"><i>&rho;</i> = 0.85</span><span>rank correlation between hospital beds and staff</span></p>
-          </article>
-
-          <article class="proj">
-            <figure class="proj-fig">
-              <svg viewBox="0 0 320 200" data-glyph="governance" aria-hidden="true"></svg>
-              <figcaption>Rule of law against perceived corruption, most recent year for each of 134 countries. <b>Project data.</b></figcaption>
-            </figure>
-            <div class="proj-body">
-              <h3>Governance, corruption and economic growth</h3>
-              <p>885 country-years from the Quality of Government dataset, 2012 to 2021. I modelled GDP growth on governance indicators with multiple regression, dropped the corruption index after variance inflation factors flagged collinearity, and checked the model with Breusch&ndash;Pagan, Shapiro&ndash;Wilk and Durbin&ndash;Watson tests.</p>
-              <p class="proj-tools">R: multiple regression, VIF, residual diagnostics</p>
-              <a class="proj-link" href="https://github.com/AdeboluBlaise/R-codes/tree/main/Global%20Governance%2C%20Corruption%2C%20%26%20Economic%20Growth">Code on GitHub</a>
-            </div>
-            <p class="proj-stat"><span class="m"><i>r</i> = 0.95</span><span>correlation between rule of law and corruption perception, the collinearity the model had to handle</span></p>
-          </article>
-
-          <article class="proj">
-            <figure class="proj-fig">
-              <svg viewBox="0 0 320 200" data-glyph="classify" aria-hidden="true"></svg>
-              <figcaption>Decision regions forming across a feature space. <b>Illustration of the method.</b></figcaption>
-            </figure>
-            <div class="proj-body">
-              <h3>Predicting a phone&rsquo;s price band</h3>
-              <p>2,000 phones described by 20 specifications, in four price bands. I capped outliers, ranked features with a random forest (RAM carried half the importance), then compared a decision tree, k-nearest neighbours and a neural network on a held-out 20%.</p>
-              <p class="proj-tools">Python: scikit-learn, random forest, decision tree, KNN, MLP</p>
-              <a class="proj-link" href="https://github.com/AdeboluBlaise/Python-codes/tree/main/End-to-End%20Mobile%20Price%20Classification">Notebook on GitHub</a>
-            </div>
-            <p class="proj-stat"><span class="m">96.5%</span><span>test accuracy for the neural network, against 83% for a decision tree and 62% for KNN</span></p>
-          </article>
-
-          <article class="proj">
-            <figure class="proj-fig">
-              <svg viewBox="0 0 320 200" data-glyph="regression" aria-hidden="true"></svg>
-              <figcaption>Least squares turning a line until the squared residuals are smallest. <b>Illustration of the method.</b></figcaption>
-            </figure>
-            <div class="proj-body">
-              <h3>Customer satisfaction and segmentation</h3>
-              <p>About 8,000 order records merged from two files. I modelled the satisfaction rate with linear regression, checked it on held-out orders, then segmented customers with k-means, choosing the number of clusters by silhouette score.</p>
-              <p class="proj-tools">Python: pandas, statsmodels OLS, scikit-learn k-means</p>
-              <a class="proj-link" href="https://github.com/AdeboluBlaise/Python-codes/tree/main/Sales%20Analysis%2C%20Customer%20Segmentation%20%26%20Satisfaction%20Prediction">Notebook on GitHub</a>
-            </div>
-            <p class="proj-stat"><span class="m"><i>R</i>&sup2; = 0.97</span><span>for the satisfaction model on held-out orders</span></p>
-          </article>
-
-          <article class="proj">
-            <figure class="proj-fig">
-              <svg viewBox="0 0 320 200" data-glyph="tree" aria-hidden="true"></svg>
-              <figcaption>A regression tree splitting the feature space into regions, shaded by mean profit. <b>Illustration of the method.</b></figcaption>
-            </figure>
-            <div class="proj-body">
-              <h3>Franchise profit with tree models</h3>
-              <p>Profit data for 100 caf&eacute;, pizza and burger franchises in two cities. I encoded business type and location, fitted a decision tree and a random forest, and used feature importance to show what drives profit.</p>
-              <p class="proj-tools">Python: scikit-learn decision tree and random forest regressors</p>
-              <a class="proj-link" href="https://github.com/AdeboluBlaise/Python-codes/tree/main/Franchise%20Profit%20Predictions%20with%20Decision%20Trees%20and%20Random%20Forests">Notebook on GitHub</a>
-            </div>
-            <p class="proj-stat"><span class="m"><i>R</i>&sup2; = 0.91</span><span>for the random forest on held-out franchises</span></p>
-          </article>
-
-          <article class="proj">
-            <figure class="proj-fig">
-              <svg viewBox="0 0 320 200" data-glyph="kmeans" aria-hidden="true"></svg>
-              <figcaption>K-means in motion: centroids move until the groups stop changing. <b>Illustration of the method.</b></figcaption>
-            </figure>
-            <div class="proj-body">
-              <h3>Segmenting mall shoppers</h3>
-              <p>200 shoppers described by age, income and spending score. After removing the two highest-income outliers I chose the number of clusters with the elbow method and grouped the shoppers with k-means into segments a marketing team can target.</p>
-              <p class="proj-tools">Python: seaborn, scikit-learn k-means, Yellowbrick elbow method</p>
-              <a class="proj-link" href="https://github.com/AdeboluBlaise/Python-codes/tree/main/Mall%20Customer%20Analysis%20%26%20Clustering">Notebook on GitHub</a>
-            </div>
-            <p class="proj-stat"><span class="m"><i>k</i> = 4</span><span>shopper segments, chosen by the elbow method</span></p>
-          </article>
-
+        <div class="sec-head">
+          <div>
+            <h2 id="work-h">Selected work</h2>
+            <p class="intro">A few pieces I can share publicly. Most of my analysis is client work and stays private.</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Type of work">
+            <button class="tab" type="button" role="tab" id="tab-analyses" aria-controls="panel-analyses" aria-selected="true">Analyses</button>
+            <button class="tab" type="button" role="tab" id="tab-dashboards" aria-controls="panel-dashboards" aria-selected="false" tabindex="-1">Dashboards <span class="count">10</span></button>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Dashboards -->
-    <section class="section" id="dashboards" aria-labelledby="dashboards-h">
-      <div class="wrap">
-        <header class="sec-head">
-          <h2 id="dashboards-h">Dashboards</h2>
-          <p>Ten dashboards and reports built in Tableau, Power BI and Excel, covering sales, public safety, people, insurance and operations. Open one to see it full size.</p>
-        </header>
+        <div class="panel is-active" id="panel-analyses" role="tabpanel" aria-labelledby="tab-analyses">
+          <div class="cards swipe">
 
-        <ul class="dash-grid">
-          <li class="dash">
-            <a href="/assets/img/dashboards/07-insurance-fraud-lg.webp" data-lightbox data-w="1471" data-h="817" data-src="https://drive.google.com/file/d/1jYbqkerGQumdwdY8VlM9F9p6UIjwdQli/view" data-extra="https://docs.google.com/presentation/d/1B2-8ueuAvnGxmFmYTkmYZP01C_ZTipNymWuoo0PkzSA/edit?usp=sharing" data-extra-label="Read the findings (slides)">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/07-insurance-fraud-sm.webp" srcset="/assets/img/dashboards/07-insurance-fraud-sm.webp 760w, /assets/img/dashboards/07-insurance-fraud-lg.webp 1471w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 600px" width="760" height="422" alt="Vehicle insurance claims dashboard with totals, claims per year, and breakdowns by gender, marital status, age, driver rating, accident area and vehicle make." loading="lazy" decoding="async"></span>
-              <h3>Insurance analytics and fraud</h3>
-              <p>15,419 vehicle insurance claims, 923 of them fraudulent. Chi-square tests picked out the claim features linked to fraud.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/04-client-acquisition-lg.webp" data-lightbox data-w="1013" data-h="1225" data-src="https://drive.google.com/file/d/1qawm5tLewY_g3ONFfeebCs0lAvK16_QL/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/04-client-acquisition-sm.webp" srcset="/assets/img/dashboards/04-client-acquisition-sm.webp 760w, /assets/img/dashboards/04-client-acquisition-lg.webp 1013w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 600px" style="object-position: 50% 64%" width="760" height="919" alt="Client acquisition story with written insights, leads and verified clients by channel, spend against conversion rate, and leads per week." loading="lazy" decoding="async"></span>
-              <h3>Client acquisition channels</h3>
-              <p>11,720 leads across four channels: conversion, spend and cost per conversion, with written recommendations.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/02-fire-incident-lg.webp" data-lightbox data-w="788" data-h="888" data-src="https://drive.google.com/file/d/1-sKoJhyrkmd_-p-Sw8lgwkwBQe-re6G_/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/02-fire-incident-sm.webp" srcset="/assets/img/dashboards/02-fire-incident-sm.webp 760w, /assets/img/dashboards/02-fire-incident-lg.webp 788w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="856" alt="Fire incident overview with incident, casualty and response-time totals, incident outcomes, and incidents per month and weekday." loading="lazy" decoding="async"></span>
-              <h3>Fire incidents and response</h3>
-              <p>1,164 incidents, 71 casualties and a 5.1-minute average response, broken down by month and weekday.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/06-hr-analytics-lg.webp" data-lightbox data-w="1458" data-h="832" data-src="https://drive.google.com/file/d/1dF0u5m9DJFY5Z00fvaz2mMv7X5MtrYIF/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/06-hr-analytics-sm.webp" srcset="/assets/img/dashboards/06-hr-analytics-sm.webp 760w, /assets/img/dashboards/06-hr-analytics-lg.webp 1458w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="434" alt="HR analytics dashboard with employee counts by marital status, gender, resignation reason, department, experience and age." loading="lazy" decoding="async"></span>
-              <h3>HR analytics</h3>
-              <p>A workforce of 20,000: headcount by department, age and experience, and the reasons people resign.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/01-sales-performance-lg.webp" data-lightbox data-w="908" data-h="959" data-src="https://drive.google.com/file/d/1803fnlt_vhYftMdCIopIiEmilC6Dm5gG/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/01-sales-performance-sm.webp" srcset="/assets/img/dashboards/01-sales-performance-sm.webp 760w, /assets/img/dashboards/01-sales-performance-lg.webp 908w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="803" alt="Sales performance dashboard with order, sales and profit totals, monthly sales trend, top products, category sales, ship modes and a regional sales map." loading="lazy" decoding="async"></span>
-              <h3>Sales performance</h3>
-              <p>Four years of retail orders: 9,994 orders, $2.3M in sales and $286K profit by month, product and region.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/05-sales-profit-lg.webp" data-lightbox data-w="788" data-h="1488" data-src="https://drive.google.com/file/d/1ZM7adoGf5AfBzNWWmERc6qiIUqtNLFIk/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/05-sales-profit-sm.webp" srcset="/assets/img/dashboards/05-sales-profit-sm.webp 760w, /assets/img/dashboards/05-sales-profit-lg.webp 788w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="1435" alt="Sales and profit dashboard with yearly profit and sales, orders by category, segment and ship mode, profit margin by state, and return rates." loading="lazy" decoding="async"></span>
-              <h3>Sales, profit and returns</h3>
-              <p>A 12.5% profit margin traced through segments, categories and states, with return rates by manufacturer.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/03-bicycle-retail-lg.webp" data-lightbox data-w="1426" data-h="1217" data-src="https://drive.google.com/file/d/1drMBCsQaCd4r1QzrVvJGjbHdLPjisoqa/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/03-bicycle-retail-sm.webp" srcset="/assets/img/dashboards/03-bicycle-retail-sm.webp 760w, /assets/img/dashboards/03-bicycle-retail-lg.webp 1426w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="649" alt="Bicycle retail sales dashboard with transactions and sales totals, sales by age, monthly trend, segment, brand, payment type and state." loading="lazy" decoding="async"></span>
-              <h3>Bicycle retail sales</h3>
-              <p>Three years of sales for a bicycle retailer: 2,500 transactions and $3.2M by brand, segment, state and age.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/09-fleet-management-lg.webp" data-lightbox data-w="993" data-h="793" data-src="https://drive.google.com/file/d/17flyOm4a7EsInhcfvB1YZRr9MTV2uDTY/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/09-fleet-management-sm.webp" srcset="/assets/img/dashboards/09-fleet-management-sm.webp 760w, /assets/img/dashboards/09-fleet-management-lg.webp 993w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="607" alt="Fleet management overview with fleet size, makes, departments, labour time, mileage and downtime, fleet by category and service group, and oldest and newest equipment." loading="lazy" decoding="async"></span>
-              <h3>Fleet management</h3>
-              <p>1,185 vehicles across 50 departments: equipment mix, service groups, labour time and downtime.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/08-nobel-prize-lg.webp" data-lightbox data-w="1108" data-h="1641" data-src="https://drive.google.com/file/d/123HxoBdR7g3B6RL5KON7azW5guzL7Kas/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/08-nobel-prize-sm.webp" srcset="/assets/img/dashboards/08-nobel-prize-sm.webp 760w, /assets/img/dashboards/08-nobel-prize-lg.webp 1108w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="1126" alt="Nobel Prize laureates dashboard with laureate counts by category, a table of laureates, universities, winning age, winners over the years and a map of birth countries." loading="lazy" decoding="async"></span>
-              <h3>Nobel Prize laureates</h3>
-              <p>923 laureates across six prizes, 79 countries and 306 universities, with winning age and trends over time.</p>
-            </a>
-          </li>
-          <li class="dash">
-            <a href="/assets/img/dashboards/10-cookie-sales-lg.webp" data-lightbox data-w="1132" data-h="826" data-src="https://drive.google.com/file/d/1RCdpEh5lfiHgUYAL9cCx-fPLhgtCjiez/view">
-              <span class="dash-thumb"><img src="/assets/img/dashboards/10-cookie-sales-sm.webp" srcset="/assets/img/dashboards/10-cookie-sales-sm.webp 760w, /assets/img/dashboards/10-cookie-sales-lg.webp 1132w" sizes="(max-width: 600px) 100vw, (max-width: 1080px) 50vw, 300px" width="760" height="555" alt="Cookie sales dashboard with orders, sales and profit totals, orders by cookie type and state, monthly sales and profit, and a customer table." loading="lazy" decoding="async"></span>
-              <h3>Cookie sales and profit</h3>
-              <p>700 orders and $4.69M in sales across cookie types, customers and states, 2019 to 2020.</p>
-            </a>
-          </li>
-        </ul>
+            <article class="card">
+              <figure class="card-fig"><svg viewBox="0 0 320 200" data-fig="food" role="img" aria-label="Line chart of nine staple food prices in Nigeria from 2012 to 2022, all rising, with imported rice highlighted."></svg></figure>
+              <h3>Food prices in Nigeria</h3>
+              <p class="card-text">Ten years of monthly prices for nine staples. I modelled how the prices move together with a vector autoregression and Granger causality tests.</p>
+              <p class="card-stat"><span class="num">3.6&times;</span><span class="lbl">rise in the price of imported rice, 2012 to 2022</span></p>
+              <p class="card-links"><a href="https://github.com/AdeboluBlaise/R-codes/tree/main/Advanced%20Time-Series%20Analysis%20%26%20VAR%20Modeling%20for%20Food%20Price%20Trends">Code and plots (R)</a></p>
+            </article>
 
-        <p class="dash-more">
-          <a href="https://1drv.ms/b/s!AtZL5VyYrCf1gnM4ypnUnzwAFC87?e=LERIMK">All dashboards in one PDF</a>
-          <a href="https://1drv.ms/u/s!AtZL5VyYrCf1gnR5gbMQ4X4MhFFR?e=9hidO0">Power BI source file</a>
-          <a href="https://docs.google.com/presentation/d/1B2-8ueuAvnGxmFmYTkmYZP01C_ZTipNymWuoo0PkzSA/edit?usp=sharing">Insurance fraud findings, slides</a>
-        </p>
+            <article class="card">
+              <figure class="card-fig"><svg viewBox="0 0 320 200" data-fig="fraud" role="img" aria-label="A grid of 100 squares in which 6 are filled: about 6 in every 100 insurance claims were fraudulent."></svg></figure>
+              <h3>Insurance fraud</h3>
+              <p class="card-text">15,419 vehicle insurance claims. I used chi-square tests to find which claim features go with fraud, then built the dashboard and wrote up the findings.</p>
+              <p class="card-stat"><span class="num">6%</span><span class="lbl">of claims were fraudulent, 923 in all</span></p>
+              <p class="card-links"><a href="https://docs.google.com/presentation/d/1B2-8ueuAvnGxmFmYTkmYZP01C_ZTipNymWuoo0PkzSA/edit?usp=sharing">Findings (slides)</a><a href="/assets/img/dashboards/07-insurance-fraud-lg.webp" data-open-dash="0">Dashboard</a></p>
+            </article>
+
+            <article class="card">
+              <figure class="card-fig"><svg viewBox="0 0 320 200" data-fig="hospital" role="img" aria-label="Scatter plot of beds against staff for 35 hospitals, rising together, with a trend line."></svg></figure>
+              <h3>Hospital resources and outcomes</h3>
+              <p class="card-text">35 hospitals: how beds, staff and deaths relate. The data weren&rsquo;t normally distributed, so I used rank-based tests alongside t-tests and confidence intervals.</p>
+              <p class="card-stat"><span class="num">0.85</span><span class="lbl">rank correlation between beds and staff</span></p>
+              <p class="card-links"><a href="https://github.com/AdeboluBlaise/R-codes/tree/main/Hospital%20Data%20Analysis">Code and plots (R)</a></p>
+            </article>
+
+            <article class="card">
+              <figure class="card-fig"><svg viewBox="0 0 320 200" data-fig="governance" role="img" aria-label="Scatter plot of rule of law against corruption perception for 134 countries, tightly rising together, with a trend line."></svg></figure>
+              <h3>Governance and economic growth</h3>
+              <p class="card-text">Does good governance go with growth? Multiple regression on 885 country-years, with checks for collinearity and for the model&rsquo;s assumptions.</p>
+              <p class="card-stat"><span class="num">134</span><span class="lbl">countries, 2012 to 2021</span></p>
+              <p class="card-links"><a href="https://github.com/AdeboluBlaise/R-codes/tree/main/Global%20Governance%2C%20Corruption%2C%20%26%20Economic%20Growth">Code (R)</a></p>
+            </article>
+
+            <article class="card">
+              <figure class="card-fig"><svg viewBox="0 0 320 200" data-fig="models" role="img" aria-label="Bar chart of model accuracy: neural network 96.5 percent, decision tree 83 percent, k-nearest neighbours 62 percent."></svg></figure>
+              <h3>Predicting phone prices</h3>
+              <p class="card-text">Predicting a phone&rsquo;s price band from 20 specifications. I compared three models on phones they hadn&rsquo;t seen; RAM was the strongest predictor.</p>
+              <p class="card-stat"><span class="num">96.5%</span><span class="lbl">accuracy of the best model</span></p>
+              <p class="card-links"><a href="https://github.com/AdeboluBlaise/Python-codes/tree/main/End-to-End%20Mobile%20Price%20Classification">Notebook (Python)</a></p>
+            </article>
+
+            <article class="card card-note">
+              <p>These are a few I can show.</p>
+              <p>Most of my analyses were done for clients and stay private. I&rsquo;m happy to talk through the methods behind them, and there&rsquo;s more code on <a href="https://github.com/AdeboluBlaise">GitHub</a>.</p>
+            </article>
+
+          </div>
+          <p class="swipe-hint">Swipe sideways for more.</p>
+        </div>
+
+        <div class="panel" id="panel-dashboards" role="tabpanel" aria-labelledby="tab-dashboards">
+          <ul class="dash-grid swipe">
+            <li class="dash"><a href="/assets/img/dashboards/07-insurance-fraud-lg.webp" data-lightbox data-w="1471" data-h="817" data-src="https://drive.google.com/file/d/1jYbqkerGQumdwdY8VlM9F9p6UIjwdQli/view" data-desc="15,419 vehicle insurance claims, 923 of them fraudulent. Chi-square tests picked out the claim features linked to fraud." data-extra="https://docs.google.com/presentation/d/1B2-8ueuAvnGxmFmYTkmYZP01C_ZTipNymWuoo0PkzSA/edit?usp=sharing" data-extra-label="Read the findings (slides)"><span class="dash-thumb"><img src="/assets/img/dashboards/07-insurance-fraud-sm.webp" width="760" height="422" alt="Vehicle insurance claims dashboard." loading="lazy" decoding="async"></span><h3>Insurance analytics and fraud</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/04-client-acquisition-lg.webp" data-lightbox data-w="1013" data-h="1225" data-src="https://drive.google.com/file/d/1qawm5tLewY_g3ONFfeebCs0lAvK16_QL/view" data-desc="11,720 leads across four channels: conversion, spend and cost per conversion, with written recommendations."><span class="dash-thumb"><img src="/assets/img/dashboards/04-client-acquisition-sm.webp" width="760" height="919" alt="Client acquisition channels dashboard." loading="lazy" decoding="async" style="object-position: 50% 64%"></span><h3>Client acquisition channels</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/02-fire-incident-lg.webp" data-lightbox data-w="788" data-h="888" data-src="https://drive.google.com/file/d/1-sKoJhyrkmd_-p-Sw8lgwkwBQe-re6G_/view" data-desc="1,164 incidents, 71 casualties and a 5.1-minute average response, broken down by month and weekday."><span class="dash-thumb"><img src="/assets/img/dashboards/02-fire-incident-sm.webp" width="760" height="856" alt="Fire incident analytics dashboard." loading="lazy" decoding="async"></span><h3>Fire incidents and response</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/06-hr-analytics-lg.webp" data-lightbox data-w="1458" data-h="832" data-src="https://drive.google.com/file/d/1dF0u5m9DJFY5Z00fvaz2mMv7X5MtrYIF/view" data-desc="A workforce of 20,000: headcount by department, age and experience, and the reasons people resign."><span class="dash-thumb"><img src="/assets/img/dashboards/06-hr-analytics-sm.webp" width="760" height="434" alt="HR analytics dashboard." loading="lazy" decoding="async"></span><h3>HR analytics</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/01-sales-performance-lg.webp" data-lightbox data-w="908" data-h="959" data-src="https://drive.google.com/file/d/1803fnlt_vhYftMdCIopIiEmilC6Dm5gG/view" data-desc="Four years of retail orders: 9,994 orders, $2.3M in sales and $286K profit by month, product and region."><span class="dash-thumb"><img src="/assets/img/dashboards/01-sales-performance-sm.webp" width="760" height="803" alt="Sales performance dashboard." loading="lazy" decoding="async"></span><h3>Sales performance</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/05-sales-profit-lg.webp" data-lightbox data-w="788" data-h="1488" data-src="https://drive.google.com/file/d/1ZM7adoGf5AfBzNWWmERc6qiIUqtNLFIk/view" data-desc="A 12.5% profit margin traced through segments, categories and states, with return rates by manufacturer."><span class="dash-thumb"><img src="/assets/img/dashboards/05-sales-profit-sm.webp" width="760" height="1435" alt="Sales, profit and returns dashboard." loading="lazy" decoding="async"></span><h3>Sales, profit and returns</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/03-bicycle-retail-lg.webp" data-lightbox data-w="1426" data-h="1217" data-src="https://drive.google.com/file/d/1drMBCsQaCd4r1QzrVvJGjbHdLPjisoqa/view" data-desc="Three years of sales for a bicycle retailer: 2,500 transactions and $3.2M by brand, segment, state and age."><span class="dash-thumb"><img src="/assets/img/dashboards/03-bicycle-retail-sm.webp" width="760" height="649" alt="Bicycle retail sales dashboard." loading="lazy" decoding="async"></span><h3>Bicycle retail sales</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/09-fleet-management-lg.webp" data-lightbox data-w="993" data-h="793" data-src="https://drive.google.com/file/d/17flyOm4a7EsInhcfvB1YZRr9MTV2uDTY/view" data-desc="1,185 vehicles across 50 departments: equipment mix, service groups, labour time and downtime."><span class="dash-thumb"><img src="/assets/img/dashboards/09-fleet-management-sm.webp" width="760" height="607" alt="Fleet management dashboard." loading="lazy" decoding="async"></span><h3>Fleet management</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/08-nobel-prize-lg.webp" data-lightbox data-w="1108" data-h="1641" data-src="https://drive.google.com/file/d/123HxoBdR7g3B6RL5KON7azW5guzL7Kas/view" data-desc="923 laureates across six prizes, 79 countries and 306 universities, with winning age and trends over time."><span class="dash-thumb"><img src="/assets/img/dashboards/08-nobel-prize-sm.webp" width="760" height="1126" alt="Nobel Prize laureates dashboard." loading="lazy" decoding="async"></span><h3>Nobel Prize laureates</h3></a></li>
+            <li class="dash"><a href="/assets/img/dashboards/10-cookie-sales-lg.webp" data-lightbox data-w="1132" data-h="826" data-src="https://drive.google.com/file/d/1RCdpEh5lfiHgUYAL9cCx-fPLhgtCjiez/view" data-desc="700 orders and $4.69M in sales across cookie types, customers and states, 2019 to 2020."><span class="dash-thumb"><img src="/assets/img/dashboards/10-cookie-sales-sm.webp" width="760" height="555" alt="Cookie sales and profit dashboard." loading="lazy" decoding="async"></span><h3>Cookie sales and profit</h3></a></li>
+          </ul>
+          <p class="swipe-hint">Swipe sideways for more, and tap one to open it.</p>
+          <p class="dash-more">
+            <a href="https://1drv.ms/b/s!AtZL5VyYrCf1gnM4ypnUnzwAFC87?e=LERIMK">All dashboards in one PDF</a>
+            <a href="https://1drv.ms/u/s!AtZL5VyYrCf1gnR5gbMQ4X4MhFFR?e=9hidO0">Power BI source file</a>
+          </p>
+        </div>
       </div>
 
       <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
@@ -324,108 +204,61 @@
     <!-- Experience -->
     <section class="section" id="experience" aria-labelledby="experience-h">
       <div class="wrap">
-        <header class="sec-head">
+        <div class="sec-head">
           <h2 id="experience-h">Experience</h2>
-          <p>Seven years of applied statistics: consulting for researchers, reporting for clients and teaching, alongside two degrees. Each bar is one role or degree on the same timeline.</p>
-        </header>
-
-        <div class="tl">
-          <div class="tl-scale" aria-hidden="true">
-            <span></span>
-            <div class="tl-years">
-              <span style="left:0%">2016</span>
-              <span style="left:18.18%">2018</span>
-              <span style="left:36.36%">2020</span>
-              <span style="left:54.55%">2022</span>
-              <span style="left:72.73%">2024</span>
-              <span style="left:90.91%">2026</span>
+        </div>
+        <div class="xp">
+          <div>
+            <h3 class="col-h">Work</h3>
+            <ol class="xp-list">
+              <li>
+                <span class="xp-when">2021&ndash;present</span>
+                <div class="xp-what"><b>Data analyst and instructor</b>, <span class="org">C&amp;C Analytics, Lagos</span>
+                  <p>Trained more than 500 people in data analytics, and built Tableau and Power BI reporting that clients use to make decisions.</p></div>
+              </li>
+              <li>
+                <span class="xp-when">2021&ndash;2023</span>
+                <div class="xp-what"><b>Team lead and statistical consultant</b>, <span class="org">FUTA-LISA, Akure</span>
+                  <p>Led 10 staff and more than 60 volunteers providing statistical consulting to researchers, and trained staff of a state bureau of statistics.</p></div>
+              </li>
+              <li>
+                <span class="xp-when">2019&ndash;present</span>
+                <div class="xp-what"><b>Freelance statistician and analyst</b>
+                  <p>Research analysis, dashboards and predictive models for clients, and tutoring in statistics.</p></div>
+              </li>
+              <li>
+                <span class="xp-when">2021</span>
+                <div class="xp-what"><b>Intern</b>, <span class="org">UI-LISA, Ibadan</span>
+                  <p>A household survey on COVID-19 knowledge, and survey analysis in R that informed curriculum changes.</p></div>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <div class="xp-block">
+            <h3 class="col-h">Education</h3>
+            <ol class="xp-list">
+              <li>
+                <span class="xp-when">2025&ndash;present</span>
+                <div class="xp-what"><b>MSc Biostatistics</b>
+                  <p>University of Ibadan, Department of Epidemiology and Medical Statistics</p></div>
+              </li>
+              <li>
+                <span class="xp-when">2016&ndash;2023</span>
+                <div class="xp-what"><b>B.Tech Statistics</b>
+                  <p>Federal University of Technology, Akure. Final-year research on the behaviour of staple food prices in Nigeria.</p></div>
+              </li>
+            </ol>
+            </div>
+            <div class="xp-block">
+            <h3 class="col-h">Certificates</h3>
+            <ol class="xp-list certs">
+              <li><span class="xp-when">Coursera</span><div class="xp-what">Data Visualization with Tableau</div></li>
+              <li><span class="xp-when">DataCamp</span><div class="xp-what">Introduction to Statistics in R</div></li>
+              <li><span class="xp-when">UI-LISA</span><div class="xp-what">Data Analytics with Power BI and Excel</div></li>
+              <li><span class="xp-when">UI-LISA</span><div class="xp-what">Professional Use of LaTeX</div></li>
+            </ol>
             </div>
           </div>
-          <ol class="tl-rows">
-            <li class="tl-row">
-              <div class="tl-label"><b>B.Tech Statistics</b><span>Federal University of Technology, Akure</span><span class="visually-hidden">2016 to 2023</span></div>
-              <div class="tl-track" aria-hidden="true"><i class="tl-bar is-study" style="left:0%;width:68.18%"></i></div>
-            </li>
-            <li class="tl-row">
-              <div class="tl-label"><b>Freelance statistician and analyst</b><span>Independent</span><span class="visually-hidden">2019 to present</span></div>
-              <div class="tl-track" aria-hidden="true"><i class="tl-bar is-now" style="left:31.06%;width:67.12%"></i></div>
-            </li>
-            <li class="tl-row">
-              <div class="tl-label"><b>Intern</b><span>UI-LISA, Ibadan</span><span class="visually-hidden">2021</span></div>
-              <div class="tl-track" aria-hidden="true"><i class="tl-bar" style="left:46.97%;width:6.06%"></i></div>
-            </li>
-            <li class="tl-row">
-              <div class="tl-label"><b>Data analyst and instructor</b><span>C&amp;C Analytics, Lagos</span><span class="visually-hidden">2021 to present</span></div>
-              <div class="tl-track" aria-hidden="true"><i class="tl-bar is-now" style="left:51.52%;width:46.67%"></i></div>
-            </li>
-            <li class="tl-row">
-              <div class="tl-label"><b>Team lead and statistical consultant</b><span>FUTA-LISA, Akure</span><span class="visually-hidden">2021 to 2023</span></div>
-              <div class="tl-track" aria-hidden="true"><i class="tl-bar" style="left:52.27%;width:15.15%"></i></div>
-            </li>
-            <li class="tl-row">
-              <div class="tl-label"><b>MSc Biostatistics</b><span>University of Ibadan</span><span class="visually-hidden">2025 to present</span></div>
-              <div class="tl-track" aria-hidden="true"><i class="tl-bar is-study is-now" style="left:89.39%;width:8.79%"></i></div>
-            </li>
-          </ol>
-          <p class="tl-key" aria-hidden="true">
-            <span><i class="k-work"></i>Work</span>
-            <span><i class="k-study"></i>Study</span>
-            <span><i class="k-now"></i>Ongoing</span>
-          </p>
-        </div>
-
-        <div class="roles">
-          <article class="role">
-            <h3>Data analyst and instructor</h3>
-            <p class="where">C&amp;C Analytics, Lagos. 2021 to present</p>
-            <ul>
-              <li>Trained more than 500 people in data analytics.</li>
-              <li>Led or supported the research projects of 20+ undergraduate and postgraduate students.</li>
-              <li>Managed a team of analysts and built Tableau and Power BI reports that clients used to make decisions.</li>
-            </ul>
-          </article>
-          <article class="role">
-            <h3>Team lead and statistical consultant</h3>
-            <p class="where">FUTA Laboratory for Interdisciplinary Statistical Analysis, Akure. Volunteer, 2021 to 2023</p>
-            <ul>
-              <li>Led 10 full-time members, three of them PhD holders, and more than 60 volunteers.</li>
-              <li>Gave statistical consultations to 30+ researchers.</li>
-              <li>Trained staff of a state bureau of statistics in Excel, R, Power BI and SPSS.</li>
-            </ul>
-          </article>
-          <article class="role">
-            <h3>Freelance statistician and analyst</h3>
-            <p class="where">Independent. 2019 to present</p>
-            <ul>
-              <li>Tutored 50+ postgraduate students in statistics and analytics.</li>
-              <li>Built dashboards and analytical reports to clients&rsquo; requirements.</li>
-              <li>Predictive modelling in Python and R, with machine-learning pipelines on Azure.</li>
-              <li>Ran quantitative and qualitative data collection for 10+ research projects.</li>
-            </ul>
-          </article>
-          <article class="role">
-            <h3>Intern</h3>
-            <p class="where">UI Laboratory for Interdisciplinary Statistical Analysis, Ibadan. 2021</p>
-            <ul>
-              <li>Ran a household survey on COVID-19 knowledge with a team of interns.</li>
-              <li>Analysed 350+ online survey responses in R; the findings fed into curriculum changes.</li>
-              <li>Wrote technical documentation and visualisations for decision makers.</li>
-            </ul>
-          </article>
-          <article class="role">
-            <h3>MSc Biostatistics</h3>
-            <p class="where">University of Ibadan, Department of Epidemiology and Medical Statistics. 2025 to present</p>
-            <ul>
-              <li>Statistical methods for health research, including clinical trials and epidemiological analysis.</li>
-            </ul>
-          </article>
-          <article class="role">
-            <h3>B.Tech Statistics</h3>
-            <p class="where">Federal University of Technology, Akure. 2016 to 2023</p>
-            <ul>
-              <li>Final-year research: a behavioural analysis of major staple foods in Nigeria.</li>
-            </ul>
-          </article>
         </div>
       </div>
     </section>
@@ -433,41 +266,28 @@
     <!-- About -->
     <section class="section" id="about" aria-labelledby="about-h">
       <div class="wrap">
-        <header class="sec-head">
+        <div class="sec-head">
           <h2 id="about-h">About</h2>
-        </header>
-
-        <div class="about-grid">
-          <div class="portrait">
-            <img src="/assets/img/portrait-duo-360.webp" srcset="/assets/img/portrait-duo-360.webp 360w, /assets/img/portrait-duo-720.webp 720w" sizes="(max-width: 900px) 320px, 400px" width="720" height="900" alt="Portrait of Temitope Adebolu in a three-piece suit." loading="lazy" decoding="async">
-            <img class="p-color" src="/assets/img/portrait-color-360.webp" srcset="/assets/img/portrait-color-360.webp 360w, /assets/img/portrait-color-720.webp 720w" sizes="(max-width: 900px) 320px, 400px" width="720" height="900" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="about">
+          <div class="about-text">
+            <p>I&rsquo;m a statistician from Nigeria. I enjoy working with researchers from other fields: planning how data is collected, choosing methods that fit it, and explaining the results so people who aren&rsquo;t statisticians can use them.</p>
+            <p>I&rsquo;m now studying for an MSc in Biostatistics at the University of Ibadan, and my focus is turning to health data.</p>
           </div>
-
-          <div>
-            <div class="about-text">
-              <p>I&rsquo;m a statistician from Nigeria. Since 2019 I&rsquo;ve analysed data for researchers, built dashboards and reports for businesses, and taught analytics to more than 500 people.</p>
-              <p>At the FUTA Laboratory for Interdisciplinary Statistical Analysis I led a team that gave statistical consultations to researchers and trained staff of a state bureau of statistics. Before that I interned at UI-LISA, where I worked on a household survey of COVID-19 knowledge.</p>
-              <p>I&rsquo;m now studying for an MSc in Biostatistics at the University of Ibadan, and my focus is turning to health data: careful study design, honest models, and results that hold up when someone checks them.</p>
-            </div>
-
-            <div class="t1">
-              <table>
-                <caption><b>Table 1.</b>Baseline characteristics</caption>
-                <thead>
-                  <tr><th scope="col">Characteristic</th><th scope="col">Value</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Applied statistics in practice</td><td>since 2019</td></tr>
-                  <tr><td>People taught data analytics</td><td>500+</td></tr>
-                  <tr><td>Postgraduate students tutored in statistics</td><td>50+</td></tr>
-                  <tr><td>Researchers given statistical consultations</td><td>30+</td></tr>
-                  <tr><td>Student research projects supported</td><td>20+</td></tr>
-                  <tr><td>GRE General Test, 2023</td><td>328 / 340<small>Quant 165, Verbal 163, Writing 4.5</small></td></tr>
-                  <tr><td>Languages</td><td>English, Yoruba</td></tr>
-                </tbody>
-              </table>
-              <p class="note">Counts are cumulative to 2026.</p>
-            </div>
+          <div class="t1">
+            <table>
+              <caption><b>Table 1.</b>At a glance</caption>
+              <thead>
+                <tr><th scope="col">Characteristic</th><th scope="col">Value</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Applied statistics in practice</td><td>since 2019</td></tr>
+                <tr><td>People taught data analytics</td><td>500+</td></tr>
+                <tr><td>Student research projects supported</td><td>20+</td></tr>
+                <tr><td>GRE General Test, 2023</td><td>328 / 340<small>Quant 165, Verbal 163, Writing 4.5</small></td></tr>
+                <tr><td>Languages</td><td>English, Yoruba</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -475,32 +295,20 @@
           <div>
             <h3>Toolkit</h3>
             <ul>
-              <li>R</li>
-              <li>Python<span>pandas, scikit-learn, statsmodels</span></li>
-              <li>SQL<span>MySQL</span></li>
-              <li>SPSS and SAS</li>
-              <li>Power BI, Tableau and Excel</li>
-              <li>Azure Machine Learning</li>
-              <li>LaTeX</li>
+              <li>R, Python, SQL</li>
+              <li>SPSS, SAS</li>
+              <li>Power BI, Tableau, Excel</li>
+              <li>Azure Machine Learning, LaTeX</li>
             </ul>
           </div>
           <div>
             <h3>Methods</h3>
             <ul>
-              <li>Regression and model diagnostics</li>
-              <li>Hypothesis testing, parametric and nonparametric</li>
-              <li>Time series<span>stationarity tests, VAR, Granger causality</span></li>
-              <li>Clustering and classification</li>
+              <li>Regression and diagnostics</li>
+              <li>Hypothesis testing</li>
+              <li>Time series</li>
               <li>Survey design and analysis</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Certificates</h3>
-            <ul>
-              <li>Data Visualization with Tableau<span>Coursera</span></li>
-              <li>Introduction to Statistics in R<span>DataCamp</span></li>
-              <li>Data Analytics with Power BI and Excel<span>UI-LISA</span></li>
-              <li>Professional Use of LaTeX<span>UI-LISA</span></li>
+              <li>Machine learning</li>
             </ul>
           </div>
           <div>
@@ -509,7 +317,7 @@
               <li>Royal Statistical Society</li>
               <li>American Statistical Association</li>
               <li>Institute of Mathematical Statistics</li>
-              <li>Data Science Nigeria<span>AI+ FUTA chapter</span></li>
+              <li>Data Science Nigeria</li>
             </ul>
           </div>
         </div>
@@ -519,10 +327,12 @@
     <!-- Contact -->
     <section class="section contact" id="contact" aria-labelledby="contact-h">
       <div class="wrap">
-        <header class="sec-head">
-          <h2 id="contact-h">Get in touch</h2>
-          <p>Open to statistician and data roles, research collaborations, and doctoral study in biostatistics. Email is the quickest way to reach me.</p>
-        </header>
+        <div class="sec-head">
+          <div>
+            <h2 id="contact-h">Get in touch</h2>
+            <p class="intro">Open to statistician and data roles, research collaborations, and doctoral study in biostatistics.</p>
+          </div>
+        </div>
         <div class="email-row">
           <a class="email" href="mailto:temitopeadebolu5@gmail.com">temitopeadebolu5@gmail.com</a>
           <button class="textbtn" type="button" data-copy="temitopeadebolu5@gmail.com">Copy address</button>
@@ -532,7 +342,6 @@
           <li><a href="https://github.com/AdeboluBlaise">GitHub</a></li>
           <li><a href="https://drive.google.com/file/d/1cfr-IFdyjBvwRaPEfjrkj0Mvpket3lki/view">CV (PDF)</a></li>
         </ul>
-        <p class="contact-note">Based in Ibadan and Lagos, Nigeria, on West Africa Time (UTC+1).</p>
       </div>
     </section>
   </main>
@@ -540,7 +349,7 @@
   <footer class="site-foot">
     <div class="wrap">
       <p>&copy; <span data-year>2026</span> Temitope Adebolu</p>
-      <p>Plain HTML, CSS and JavaScript on GitHub Pages. No trackers.</p>
+      <p>Ibadan and Lagos, Nigeria</p>
     </div>
   </footer>
 </body>
